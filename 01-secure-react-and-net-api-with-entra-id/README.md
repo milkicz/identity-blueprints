@@ -1,15 +1,20 @@
 # Secure react app and .net api with EntraID
 
+## Introduction
+
+## Terraform Entra configuration
+
+#### 1. Prerequisites 
+
+- Microsoft Entra ID tenant (via https://entra.microsoft.com)
 
 ## React-app
 
-1. Prerequisites
+#### 1. Prerequisites
 
 - Node.js and npm installed
-- Microsoft Entra ID tenant (via https://entra.microsoft.com)
-- An App Registration in Entra ID
 
-2. Create react app and install msal
+#### 2. Create react app and install msal
 
 ```bash
 npx create-react-app msal-react-app
@@ -17,7 +22,7 @@ cd msal-react-app
 npm install @azure/msal-browser @azure/msal-react
 ```
 
-3. Configure MSAL
+#### 3. Configure MSAL
 Create a file: src/authConfig.js
 ```js
 export const msalConfig = {
@@ -37,7 +42,7 @@ export const loginRequest = {
 };
 ```
 
-4. Initialize MSAL in the App
+#### 4. Initialize MSAL in the App
 Update src/index.js:
 ```js
 import React from "react";
@@ -55,10 +60,12 @@ root.render(
     <App />
   </MsalProvider>
 );
+```
 
-5. Add Login / Logout / Profile UI
+#### 5. Add Login / Logout / Profile UI
 
 Update src/App.js:
+```js
 import React from "react";
 import { useMsal, useIsAuthenticated } from "@azure/msal-react";
 import { loginRequest } from "./authConfig";

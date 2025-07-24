@@ -11,12 +11,15 @@ React-app
 
 2. Create react app and install msal
 
+```bash
 npx create-react-app msal-react-app
 cd msal-react-app
 npm install @azure/msal-browser @azure/msal-react
+```
 
 3. Configure MSAL
 Create a file: src/authConfig.js
+```js
 export const msalConfig = {
   auth: {
     clientId: "YOUR_CLIENT_ID", // From App Registration
@@ -32,11 +35,11 @@ export const msalConfig = {
 export const loginRequest = {
   scopes: ["User.Read"], // Or custom API scopes
 };
-
+```
 
 4. Initialize MSAL in the App
 Update src/index.js:
-
+```js
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -100,3 +103,4 @@ function App() {
 }
 
 export default App;
+```

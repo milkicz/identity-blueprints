@@ -1,7 +1,7 @@
-# identity-blueprints
+# Secure react app and .net api with EntraID
 
 
-React-app
+## React-app
 
 1. Prerequisites
 
@@ -104,3 +104,5 @@ function App() {
 
 export default App;
 ```
+
+## .NET API

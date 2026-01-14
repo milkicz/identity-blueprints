@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"api_app","Source":"./modules/entra_app_registration","Dir":"modules/entra_app_registration"},{"Key":"spa_app","Source":"./modules/entra_app_registration","Dir":"modules/entra_app_registration"}]}
